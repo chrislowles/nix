@@ -1,0 +1,2 @@
+# nix
+nixos config attempt
