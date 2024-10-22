@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# locales for australia, iso codes too
+# en_AU.UTF-8
+# en_AU ISO-8859-1
+
+# install custom bashrc commands, shortcuts to common commands, push this into config somehow
+#curl -Sk https://raw.githubusercontent.com/chrislowles/nix/main/arch/.bashrc >> ~/.bashrc
+#source ~/.bashrc
+
+# read command needed for lsp/zam shortcut flush, if we're to install them
+#echo '[Desktop Entry]
+#Hidden=true' > /tmp/1
+#find /usr -name "*lsp_plug*desktop" 2>/dev/null | cut -f 5 -d '/' | xargs -I {} cp /tmp/1 ~/.local/share/applications/{}
+#find /usr -name "*zam*desktop" 2>/dev/null | cut -f 5 -d '/' | xargs -I {} cp /tmp/1 ~/.local/share/applications/{}
+
+# read command needed for qemu vm setup
+#pacman -S --needed qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils libguestfs ovmf swtpm openbsd-netcat
