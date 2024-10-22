@@ -1,5 +1,3 @@
-My personal method of installing Arch Linux, using [`archinstall`](https://www.github.com/archlinux/archinstall) as a base.
-
 ```bash
 sudo pacman -Syy git
 git clone https://github.com/chrislowles/nix
