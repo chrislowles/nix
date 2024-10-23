@@ -2,8 +2,9 @@
 
 # final touches after the fact, reclone repo and run this post-install
 
-echo "setup for full qemu access"
+echo "full qemu setup"
 sleep 1
+sudo pacman -Syy qemu-full virt-manager libvirt iptables-nft dnsmasq openbsd-netcat
 sed -i 's/^#unix_sock_group = \"libvirt\"/unix_sock_group = \"libvirt\"/' /etc/libvirt/libvirtd.conf
 sed -i 's/^#unix_sock_ro_perms = \"0777\"/unix_sock_ro_perms = \"0777\"/' /etc/libvirt/libvirtd.conf
 sed -i 's/^#unix_sock_rw_perms = \"0770\"/unix_sock_rw_perms = \"0770\"/' /etc/libvirt/libvirtd.conf
