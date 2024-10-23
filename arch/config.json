@@ -8,10 +8,6 @@
     },
     "bootloader": "Grub",
     "config_version": "2.6.3",
-    "custom-commands": [
-        "usermod -a -G libvirt $(whoami)",
-        "newgrp libvirt"
-    ],
     "debug": false,
     "disk_encryption": null,
     "hostname": "changethisplease",
@@ -57,8 +53,7 @@
     },
     "script": "guided",
     "services": [
-        "ly",
-        "libvirtd"
+        "ly"
     ],
     "silent": false,
     "skip-mirror-check": true,
