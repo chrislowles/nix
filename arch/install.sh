@@ -93,20 +93,20 @@ if ! passwordPush; then
 	exit 1
 fi
 
-aurPkgsParse () {
-	read -e -p "Optional AUR Pkgs (suggested apps prefilled): " -i "yay-bin " aur_pkgs
-	modified_config=$(jq --arg items "$aur_pkgs" '.packages += ($items | split(" "))' <<< $(cat config.json))
-	echo "$modified_config" >> temp_config.json
-	mv temp_config.json config.json
-}
-if ! aurPkgsParse; then
-	echo "AUR packages import failed";
-fi
+#aurPkgsParse () {
+#	read -e -p "Optional AUR Pkgs (suggested apps prefilled): " -i "yay-bin " aur_pkgs
+#	modified_config=$(jq --arg items "$aur_pkgs" '.packages += ($items | split(" "))' <<< $(cat config.json))
+#	echo "$modified_config" >> temp_config.json
+#	mv temp_config.json config.json
+#}
+#if ! aurPkgsParse; then
+#	echo "AUR packages import failed";
+#fi
 
 echo "Installing with partly generated config, review disk options please..."
 sleep 3
-
-if ! archinstall --config config.json --creds creds.json --plugin https://archlinux.life/aur; then
+# --plugin https://archlinux.life/aur
+if ! archinstall --config config.json --creds creds.json; then
 	echo "SYSTEM: Failed to install"
 	exit 1
 fi
