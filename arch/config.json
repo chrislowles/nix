@@ -1,68 +1,71 @@
 {
-	"additional-repositories": [
-		"multilib"
-	],
-	"custom-commands": [
-		"usermod -a -G libvirt $(whoami)",
-		"newgrp libvirt"
-	],
-	"archinstall-language": "English",
-	"audio_config": {
-		"audio": "pipewire"
-	},
-	"bootloader": "Grub",
-	"config_version": "2.6.3",
-	"debug": false,
-	"hostname": "changethisplease",
-	"kernels": [
-		"linux"
-	],
-	"locale_config": {
-		"kb_layout": "us",
-		"sys_enc": "UTF-8",
-		"sys_lang": "en_US"
-	},
-	"mirror_config": {
-		"custom_mirrors": [],
-		"mirror_regions": {
-			"Worldwide": [
-				"https://geo.mirror.pkgbuild.com/$repo/os/$arch"
-			]
-		}
-	},
-	"network_config": {
-		"type": "nm"
-	},
-	"no_pkg_lookups": false,
-	"ntp": true,
-	"offline": false,
-	"packages": [
-		"bash", "bash-completion", "nano", "git", "jre-openjdk", "flatpak", "wget", "curl", "python", "python-pipx",
-		"ly", "i3-wm", "i3blocks", "i3lock", "i3status", "power-profiles-daemon",
-		"qemu-full", "virt-manager", "libvirt", "iptables-nft", "dnsmasq", "openbsd-netcat",
-		"yt-dlp",
-		"wine-gecko", "wine-mono", "wine-staging",
-		"firefox",
-		"qt6-multimedia-ffmpeg", "webp-pixbuf-loader", "ttf-croscore", "ffmpegthumbnailer"
-	],
-	"services": [
-		"ly",
-		"libvirtd"
-	],
-	"parallel downloads": 25,
-	"profile_config": {
-		"gfx_driver": "All open-source",
-		"greeter": null,
-		"profile": {
-			"custom_settings": {},
-			"details": [],
-			"main": "Xorg"
-		}
-	},
-	"script": "guided",
-	"silent": false,
-	"swap": true,
-	"skip-mirror-check": true,
-	"timezone": "Australia/Sydney",
-	"version": "2.6.3"
+    "additional-repositories": [
+        "multilib"
+    ],
+    "archinstall-language": "English",
+    "audio_config": {
+        "audio": "pipewire"
+    },
+    "bootloader": "Grub",
+    "config_version": "2.6.3",
+    "custom-commands": [
+        "usermod -a -G libvirt $(whoami)",
+        "newgrp libvirt"
+    ],
+    "debug": false,
+    "disk_encryption": null,
+    "hostname": "changethisplease",
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US"
+    },
+    "mirror_config": {
+        "custom_mirrors": [],
+        "mirror_regions": {
+            "Worldwide": [
+                "https://geo.mirror.pkgbuild.com/$repo/os/$arch"
+            ]
+        }
+    },
+    "network_config": {
+        "type": "nm"
+    },
+    "no_pkg_lookups": false,
+    "ntp": true,
+    "offline": false,
+    "packages": [
+        "bash", "bash-completion", "nano", "git", "jre-openjdk", "flatpak", "wget", "curl", "python", "python-pipx",
+        "ly", "i3-wm", "i3blocks", "i3lock", "i3status", "power-profiles-daemon",
+        "yt-dlp",
+        "wine-gecko", "wine-mono", "wine-staging",
+        "firefox",
+        "qt6-multimedia-ffmpeg", "webp-pixbuf-loader", "ttf-croscore", "ffmpegthumbnailer"
+    ],
+    "parallel downloads": 25,
+    "profile_config": {
+        "gfx_driver": "All open-source",
+        "greeter": null,
+        "profile": {
+            "custom_settings": {},
+            "details": [],
+            "main": "Xorg"
+        }
+    },
+    "script": "guided",
+    "services": [
+        "ly",
+        "libvirtd"
+    ],
+    "silent": false,
+    "skip-mirror-check": true,
+    "skip_ntp": false,
+    "skip_version_check": false,
+    "swap": true,
+    "timezone": "Australia/Sydney",
+    "uki": false,
+    "version": "2.8.6"
 }
