@@ -10,6 +10,7 @@ sed -i 's/^#unix_sock_ro_perms = \"0777\"/unix_sock_ro_perms = \"0777\"/' /etc/l
 sed -i 's/^#unix_sock_rw_perms = \"0770\"/unix_sock_rw_perms = \"0770\"/' /etc/libvirt/libvirtd.conf
 usermod -aG libvirt $USERNAME
 sudo systemctl enable libvirtd
+#newgrp libvirt
 
 echo "adding direct flathub remote"
 sleep 1
