@@ -35,11 +35,11 @@
     "offline": false,
     "packages": [
         "bash", "bash-completion", "nano", "git", "jre-openjdk", "flatpak", "wget", "curl", "python", "python-pipx",
-        "ly", "i3-wm", "i3blocks", "i3lock", "i3status", "power-profiles-daemon",
+        "ly", "i3-wm", "i3blocks", "i3lock", "i3status", "mc", "xdg-desktop-portal",
         "yt-dlp",
         "wine-gecko", "wine-mono", "wine-staging",
         "firefox",
-        "qt6-multimedia-ffmpeg", "webp-pixbuf-loader", "ttf-croscore", "ffmpegthumbnailer"
+        "ttf-croscore"
     ],
     "parallel downloads": 25,
     "profile_config": {
