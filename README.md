@@ -1,2 +1,2 @@
-# linux related stuff
-various flows for starting out on linux
+# Linux related stuff
+Various flows for starting out on Linux.
