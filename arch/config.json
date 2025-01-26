@@ -34,11 +34,12 @@
     "ntp": true,
     "offline": false,
     "packages": [
-        "bash", "bash-completion", "nano", "git", "jre-openjdk", "flatpak", "wget", "curl", "python", "python-pipx",
-        "ly", "i3-wm", "i3blocks", "i3lock", "i3status", "mc", "xdg-desktop-portal",
+        "bash", "bash-completion", "gvim", "git", "jre-openjdk", "flatpak", "wget", "curl", "python", "python-pipx",
+        "plasma-desktop", "plasma-nm", "plasma-pa", "dolphin", "konsole", "kdeplasma-addons", "kde-gtk-config", "plasma-systemmonitor", "breeze-gtk",
+        "sddm", "sddm-kcm",
         "yt-dlp",
-        "wine-gecko", "wine-mono", "wine-staging",
         "firefox",
+        "wine-gecko", "wine-mono", "wine-staging",
         "ttf-croscore"
     ],
     "parallel downloads": 25,
@@ -53,7 +54,7 @@
     },
     "script": "guided",
     "services": [
-        "ly"
+        "sddm"
     ],
     "silent": false,
     "skip-mirror-check": true,
