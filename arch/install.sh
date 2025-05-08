@@ -1,5 +1,7 @@
 #!/bin/bash
 
+setfont ter-v18b
+
 # "bash strict mode"
 set -euo pipefail
 IFS=$'\n\t'
@@ -71,27 +73,27 @@ if ! hostnamePush; then
 	exit 1
 fi
 
-usernamePush () {
-	read -e -p "Username: " -i "" usrname
-	modified_creds=$(jq --arg item "$usrname" '.["!users"][0]["username"] = $item' <<< $(cat creds.json))
-	echo "$modified_creds" >> temp_creds.json
-	mv temp_creds.json creds.json
-}
-if ! usernamePush; then
-	echo "Username creds import failed";
-	exit 1
-fi
+#usernamePush () {
+#	read -e -p "Username: " -i "" usrname
+#	modified_creds=$(jq --arg item "$usrname" '.["!users"][0]["username"] = $item' <<< $(cat creds.json))
+#	echo "$modified_creds" >> temp_creds.json
+#	mv temp_creds.json creds.json
+#}
+#if ! usernamePush; then
+#	echo "Username creds import failed";
+#	exit 1
+#fi
 
-passwordPush () {
-	read -e -p "Password (hidden for security): " -i "" passwd
-	modified_creds=$(jq --arg item "$passwd" '.["!users"][0]["!password"] = $item' <<< $(cat creds.json))
-	echo "$modified_creds" >> temp_creds.json
-	mv temp_creds.json creds.json
-}
-if ! passwordPush; then
-	echo "Password creds import failed";
-	exit 1
-fi
+#passwordPush () {
+#	read -e -p "Password (hidden for security): " -i "" passwd
+#	modified_creds=$(jq --arg item "$passwd" '.["!users"][0]["!password"] = $item' <<< $(cat creds.json))
+#	echo "$modified_creds" >> temp_creds.json
+#	mv temp_creds.json creds.json
+#}
+#if ! passwordPush; then
+#	echo "Password creds import failed";
+#	exit 1
+#fi
 
 #aurPkgsParse () {
 #	read -e -p "Optional AUR Pkgs (suggested apps prefilled): " -i "yay-bin " aur_pkgs
@@ -103,7 +105,7 @@ fi
 #	echo "AUR packages import failed";
 #fi
 
-echo "Installing with partly generated config, review disk options please..."
+echo "Installing with partly generated config, review disk options and user creation screen please..."
 sleep 3
 # --plugin https://archlinux.life/aur
 if ! archinstall --config config.json --creds creds.json; then
@@ -112,9 +114,6 @@ if ! archinstall --config config.json --creds creds.json; then
 fi
 
 echo "APPLYING THEMES TO GTK FLATPAK APPS: itsfoss.com/flatpak-app-apply-theme"
-sleep 2
-
-echo "PLEX USERS: ACCESS http://localhost:32400/web/ FOR CONFIGURATION"
 sleep 2
 
 echo "Done!... hopefully | More to do at github.com/chrislowles/nix under arch/extra.sh if you want :)"
