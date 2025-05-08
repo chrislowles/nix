@@ -1,10 +1,10 @@
 getmp3 () {
-	yt-dlp -x --audio-format mp3 --cookies-from-browser firefox
+	yt-dlp --cookies-from-browser firefox -x --audio-format mp3
 	# example: getmp3 https://youtu.be/NT9Cfuv5gZE
 }
 
 getmp4 () {
-	yt-dlp -f "bestvideo[ext!=webm]+bestaudio[ext!=webm]/best[ext!=webm]" --recode-video mp4
+	yt-dlp --cookies-from-browser firefox -f "bestvideo[ext!=webm]+bestaudio[ext!=webm]/best[ext!=webm]" --recode-video mp4
 	# example: getmp3 https://youtu.be/NT9Cfuv5gZE
 }
 
