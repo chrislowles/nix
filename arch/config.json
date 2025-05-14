@@ -30,6 +30,7 @@
         "sddm", "sddm-kcm",
         "yt-dlp",
         "firefox",
+        "zed", "flatpak",
         "wine-gecko", "wine-mono", "wine-staging"
     ],
     "parallel downloads": 25,
