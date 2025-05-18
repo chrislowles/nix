@@ -5,7 +5,7 @@ getmp3 () {
 
 getmp4 () {
 	yt-dlp --cookies-from-browser firefox -f "bestvideo[ext!=webm]+bestaudio[ext!=webm]/best[ext!=webm]" --recode-video mp4
-	# example: getmp3 https://youtu.be/NT9Cfuv5gZE
+	# getmp4 https://youtu.be/NT9Cfuv5gZE
 }
 
 pso () {
