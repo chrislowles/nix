@@ -33,8 +33,7 @@
         "plasma-meta", "plasma-nm", "plasma-pa", "dolphin", "konsole", "kde-gtk-config", "plasma-systemmonitor", "breeze-gtk",
         "sddm", "sddm-kcm",
         "yt-dlp",
-        "firefox",
-        "flatpak"
+        "firefox"
     ],
     "parallel downloads": 25,
     "script": "guided",
