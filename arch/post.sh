@@ -20,9 +20,9 @@ echo "Adding direct Flathub remote."
 sleep 1
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-echo "Generic curl install for distrobox"
-sleep 1
-curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
+#echo "Generic curl install for distrobox"
+#sleep 1
+#curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
 # leaving the apps to flathub and the desktop/browser to the pkg manager
 echo "Permissions manager/cleaner and other preferred flatpaks"
