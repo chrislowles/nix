@@ -113,7 +113,4 @@ if ! archinstall --config config.json --creds creds.json; then
 	exit 1
 fi
 
-echo "APPLYING THEMES TO GTK FLATPAK APPS: itsfoss.com/flatpak-app-apply-theme"
-sleep 2
-
-echo "Done!... hopefully | More to do at github.com/chrislowles/nix under arch/extra.sh if you want :)"
+echo "Done!... hopefully | More to do at github.com/chrislowles/nix under arch/post.sh if you want :)"
