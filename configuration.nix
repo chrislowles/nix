@@ -161,6 +161,10 @@
 			libraries = with pkgs; [];
 			#libraries = options.programs.nix-ld.libraries.default ++ (pkgs.steam-run.fhsenv.args.multiPkgs pkgs) ++ (with pkgs; [ itch ]);
 		};
+		appimage = {
+			enable = true;
+			binfmt = true;
+		};
 		steam = {
 			enable = true;
 			remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
