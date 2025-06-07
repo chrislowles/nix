@@ -6,9 +6,8 @@
 
 {
 	imports = [
-		"${builtins.fetchGit { url = "https://github.com/NixOS/nixos-hardware.git"; }}/lenovo/thinkpad/t480"
-		# Include the results of the hardware scan
-		./hardware-configuration.nix
+		#"${builtins.fetchGit { url = "https://github.com/NixOS/nixos-hardware.git"; }}/lenovo/thinkpad/t480"
+		./hardware-configuration.nix # standard hardware scan config
 	 ];
 
 	# example for adding a simple ext4-based volume (WIP)
