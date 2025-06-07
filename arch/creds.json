@@ -1,9 +1,0 @@
-{
-    "!users": [
-        {
-            "!password": "pwd",
-            "sudo": true,
-            "username": "usr"
-        }
-    ]
-}
